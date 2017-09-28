@@ -13,8 +13,16 @@ $(function () {
         $(this).click(function() {
 
             // 改变小图标方向
-            h3.css("background-image", "url(./images/big-r.png)");
-            $(this).css("background-image", "url(./images/big-l.png)");
+            $(this).parent().siblings().find(".tree-item-h3").css("background-image", "url(./images/big-r.png)");
+            if ($(this).css("background-image").indexOf("big-r.png") != -1) {
+                $(this).css("background-image", "url(./images/big-l.png)");
+                console.log($(this).css("background-image").indexOf("big-r"));
+            } else {
+                h3.css("background-image", "url(./images/big-r.png)");
+                $(this).css("background-image", "url(./images/big-r.png)");
+                console.log($(this).css("background-image").indexOf("big-r"));
+
+            }
 
             // 开合转换
             $(this).parent().find(".tree-two-box").slideToggle();
@@ -28,8 +36,13 @@ $(function () {
         $(this).click(function() {
 
             // 改变小图标方向
-            h4.css("background-image", "url(./images/mid-r.png)");
-            $(this).css("background-image", "url(./images/mid-l.png)");
+            $(this).parent().siblings().find(".tree-item-h4").css("background-image", "url(./images/mid-r.png)");
+            if ($(this).css("background-image").indexOf("mid-r") != -1) {
+                $(this).css("background-image", "url(./images/mid-l.png");
+            } else {
+                h4.css("background-image", "url(./images/mid-r.png)");
+                $(this).css("background-image", "url(./images/mid-r.png)");
+            }
 
             // 开合转换
             $(this).parent().find(".tree-three-box").slideToggle();
