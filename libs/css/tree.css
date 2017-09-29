@@ -66,7 +66,7 @@ body {
     font-size: 16px;
     font-weight: 550;
     font-family: PingFangSC-Medium;
-    background: transparent url(./big-r.png) 14.5px center no-repeat;
+    background: transparent url(../../images/big-r.png) 14.5px center no-repeat;
 }
 /*二级标题*/
 .tree-item-h4 {
@@ -78,7 +78,7 @@ body {
 
     font-size: 14px;
     font-weight: 500;
-    background: transparent url(./mid-r.png) 30px center no-repeat;
+    background: transparent url(../../images/mid-r.png) 30px center no-repeat;
 }
 .tree-two-box,
 .tree-three-box {
@@ -100,11 +100,21 @@ body {
 }
 /*三级标题*/
 .tree-three-box li {
-    height: 18px;
-    line-height: 18px;
-    margin: 15px auto;
+    height: 34px;
+    line-height: 13px;
+    padding: 10.5px 0;
     padding-left: 53px;
     list-style: none;
+
+    background: transparent url(../../images/dashed.png) 43px center no-repeat;
+}
+.tree-three-box li:first-of-type {
+    height: 40.5px;
+    padding-top: 17px;
+}
+.tree-three-box li:last-of-type {
+    height: 40.5px;
+    padding-bottom: 17px;
 }
 .tree-three-box .tree-three-active {
     color: #0db95f;
