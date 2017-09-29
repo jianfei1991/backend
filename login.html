@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>CRM后管系统</title>
+    <link rel="stylesheet" href="./libs/css/login.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-content">
+            <!-- logo部分 -->
+            <div class="login-logo">
+                <div class="login-logo-image"></div>
+            </div>
+            <!-- 输入框 -->
+            <input type="text" id="login-name" name="name" value="" placeholder="用户名">
+            <input type="password" id="login-pass" name="pass" placeholder="密码">
+            <button>登录</button>
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="login-modal">
+        <div class="login-modal-content">
+            <div class="login-modal-up"><p><b>用户名</b>和<b>密码</b>不能为空！</p></div>
+            <p class="login-modal-down">确定</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var btn = document.querySelector("button");
+        var modal = document.querySelector(".login-modal");
+        var sure = document.querySelector(".login-modal-down");
+
+        // 登陆
+        btn.addEventListener("click", function () {
+            checkName();
+        });
+
+        // 关闭模态框
+        sure.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onkeyup = function (e) {
+            if (e.keyCode == 13) {
+                checkName();
+            }
+        }
+
+        // 用户名密码验证
+        function checkName() {
+            var name = document.querySelector("#login-name").value;
+            var pass = document.querySelector("#login-pass").value;
+            tip = document.querySelector(".login-modal-up p");
+
+            if ( !name && pass ) {
+                tip.innerHTML = "<b>用户</b>名不能为空！"
+                modal.style.display = "block";
+            } else if (!pass && name ) {
+                tip.innerHTML = "<b>密码</b>不能为空！"
+                modal.style.display = "block";
+            } else if (!name && !pass) {
+                modal.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

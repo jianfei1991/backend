@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+* { margin: 0; padding: 0; box-sizing: border; }
+html, body { width: 100%; height: 100%; position: relative; }
+.login-wrapper {
+    width: 100%;
+    height: 100%;
+    /*line-height: 100%;*/
+    position: relative;
+    background-image: url(../../images/Gofun.png);
+}
+.login-content {
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    background: #fff;
+    box-shadow: 0 2px 20px 0 rgba(171,183,193,0.40);
+    border-radius: 10px;
+}
+.login-logo {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+    background-image: linear-gradient(-180deg, #4c555e 11%, #252a30 75%);
+}
+.login-logo-image {
+    width: 100%;
+    height: 100%;
+    background: transparent url(../../images/logo-crm.png) 170px 34px no-repeat;
+    -webkit-background-size: 141px 82px;
+    background-size: 141px 82px;
+}
+input {
+    display: block;
+    width: 360px;
+    height: 60px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 6px;
+    margin: 0 auto;
+
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #6e8296;
+    letter-spacing: 1.33px;
+    text-indent: 40px;
+}
+input:first-of-type {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+button {
+    box-sizing: content-box;
+    display: block;
+    width: 180px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    outline: none;
+    cursor: pointer;
+
+    background-image: linear-gradient(-180deg, #1BD480 22%, #0DB95F 82%);
+    border-radius: 100px;
+    border: 5px solid #ddd;
+
+    font-family: PingFangSC-Semibold;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.login-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 5;
+    display: none;
+}
+.login-modal-content {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0; margin: auto;
+    width: 480px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.login-modal-up {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px 10px 0 0;
+}
+.login-modal-down {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 20px;
+    background: #ccc url() 0 0 no-repeat;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+}
