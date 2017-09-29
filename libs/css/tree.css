@@ -25,17 +25,26 @@ body {
 /*外层容器*/
 #tree {
     width: 170px;
-    background-color: #eaedf0;
+    height: 100%;
+    /*background-color: #eaedf0;*/
+
+    overflow: hidden;
 }
 /*内层容器*/
 .tree-box {
     width: 170px;
+    height: 100%;
     padding: 30px 0;
-    /*background-color: #eaedf0;*/
+    background-color: #eaedf0;
 
-    /*overflow: hidden;
-    overflow-y: auto;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    /*-ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;*/
 }
+.tree-box::-webkit-scrollbar { width: 0; }
+
 .tree-item {
     margin: 15px 0;
     overflow: hidden;
@@ -55,19 +64,21 @@ body {
     padding-left: 30px;
     color: #323232;
     font-size: 16px;
+    font-weight: 550;
     font-family: PingFangSC-Medium;
-    background: transparent url(../../images/big-r.png) 14.5px center no-repeat;
+    background: transparent url(./big-r.png) 14.5px center no-repeat;
 }
 /*二级标题*/
 .tree-item-h4 {
     height: 20px;
     line-height: 20px;
-    margin: 7px 0;
+    margin: 12px 0;
     padding-left: 41px;
     color: #465064;
 
     font-size: 14px;
-    background: transparent url(../../images/mid-r.png) 30px center no-repeat;
+    font-weight: 500;
+    background: transparent url(./mid-r.png) 30px center no-repeat;
 }
 .tree-two-box,
 .tree-three-box {
@@ -80,19 +91,18 @@ body {
 }
 /*三级菜单容器*/
 .tree-three-box {
-    /*padding-left: 12px;*/
+    /*padding: 10px 0;*/
     background-color: #dfe3e8;
-    box-shadow:
-                /*5px 5px 5px 5px #ccc, /*顶部阴影*/*/
-                0 0 0 0 #ccc, /*左边阴影*/
-                0 0 0 0 #ccc, /*底部阴影*/
-                0 0 0 0 #ccc; /*右边阴影*/
+    box-shadow: inset 0 0 0 0 #ccc, /*顶部阴影*/
+                inset 0 3px 3px 0 #ccc, /*左边阴影*/
+                inset 0 0 0 0 #ccc, /*底部阴影*/
+                inset 0 0 0 0 #ccc; /*右边阴影*/
 }
 /*三级标题*/
 .tree-three-box li {
     height: 18px;
     line-height: 18px;
-    margin: 8px auto;
+    margin: 15px auto;
     padding-left: 53px;
     list-style: none;
 }
