@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
+    <link rel="stylesheet" href="./libs/css/reset.css">
     <link rel="stylesheet" href="./libs/css/tree.css">
-
 </head>
 <body>
-<div id="tree"></div>
+<!-- 大容器 -->
+<div class="home-wrapper">
+    <!-- 页眉 -->
+    <header class="home-header">
+        <!-- logo 部分 -->
+        <div>
+            <h1><a href=""><img src="./images/logo-crm.png" alt=""></a></h1>
+        </div>
+        <!-- 消息提示 -->
+        <div class="home-header-news"><span>6</span></div>
+        <!-- 用户信息 -->
+        <div class="home-header-usr">
+            <span>用户名</span>
+            <ul style="display: ;">
+                <li>用户信息</li>
+                <li>用户信息</li>
+                <li>用户信息</li>
+                <li>用户信息</li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="home-main">
+        <div id="tree"></div>
+
+    </div>
+</div>
 <!-- <div id="tree">
     <div class="tree-box">
         <div class="tree-item">
