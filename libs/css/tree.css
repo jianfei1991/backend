@@ -38,17 +38,16 @@ body {
     display: inline-block;
 }
 /*logo*/
-.home-wrapper h1,
-.home-wrapper img  {
-    display: inline-block;
+.home-logo h1 {
+    height: 70px;
+    /*line-height: 70px;*/
+    margin-left: 41px;
+}
+.home-logo img  {
     width: 72px;
     height: 42px;
-}
-.home-wrapper h1 {
-    height: 70px;
-    line-height: 70px;
-    margin-left: 41px;
-    padding-top: 10px;
+	display: block;
+     margin-top: 14px;
 }
 /*消息提示*/
 .home-header-news {
