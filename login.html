@@ -13,7 +13,7 @@
                 <div class="login-logo-image"></div>
             </div>
             <!-- 输入框 -->
-            <input type="text" id="login-name" name="name" value="" placeholder="用户名">
+            <input type="text" id="login-name" name="name" value="" placeholder="用户名" autofocus>
             <input type="password" id="login-pass" name="pass" placeholder="密码">
             <button id="login-btn">登录</button>
         </div>
@@ -28,7 +28,7 @@
     </div>
 
     <script type="text/javascript">
-        var btn = document.querySelector("button");
+        var btn = document.querySelector("#login-btn");
         var modal = document.querySelector(".login-modal");
         var tip = document.querySelector(".login-modal-up p");
         var sure = document.querySelector(".login-modal-down");
@@ -76,14 +76,21 @@
                 tip.innerHTML = "<b>用户名&nbsp;</b>不能为空！"
                 modal.style.display = "block";
             } else if (!pass && name ) {
-                tip.innerHTML = "<b>密码&nbsp;</b>不能为空！"
-                modal.style.display = "block";
+                // tip.innerHTML = "<b>密码&nbsp;</b>不能为空！"
+                // modal.style.display = "block";
+
+                var passEl = document.querySelector("#login-pass");
+                passEl.focus();
+
             } else if (!name && !pass) {
                 modal.style.display = "block";
             } else if (!!name && !!pass) {
                 window.location.href = "./demo.html"
             }
         }
+
+        // 登录函数
+        function loginFn () {}
     </script>
 </body>
 </html>
