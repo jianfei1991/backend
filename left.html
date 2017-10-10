@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<title>菜单列表</title>
+<link href="./libs/css/main.css" rel="stylesheet">
+<script src="./libs/js/jquery.min.js"></script>
+<script src="./libs/js/left.js"></script>
+</head>
+<body>
+    <div id="tree"></div>
+
+    <script type="text/javascript">
+    	var treeArr = [
+            {
+                first: {name: "城市111"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com",target:"_blank"},
+                            // 如果需要在新窗口中打开被链接，设置"_blank"  ；否则不设置或者设置为空
+                            {name: "网点管理", url: "http://www.sina.com"},
+                            {name: "充电桩管理", url: "http://www.smartisan.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市222"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市222"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市222"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市222"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市222"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市222"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市222"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市333"},
+                second: [
+                    {
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            },
+            {
+                first: {name: "城市444"},
+                second: [
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    },
+                    {
+                        title: { name: "车辆监控", url: "http://www.baidu.com"},
+                        three: [
+                            {name: "维修厂管理", url: "http://www.baidu.com"},
+                            {name: "网点管理", url: "http://www.baidu.com"},
+                            {name: "充电桩管理", url: "http://www.baidu.com"}
+                        ]
+                    }
+                ]
+            }
+        ];
+        Tree("#tree", treeArr);
+    </script>
+</body>
+</html>
