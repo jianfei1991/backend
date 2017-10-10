@@ -74,6 +74,15 @@ $(function () {
         $(this).click(function() {
             $(".tree-item-li").removeClass("tree-three-active");
             $(this).toggleClass("tree-three-active");
+            // window.location.href = $(this).data("url");
+            // window.open($(this).data("url"), "_blank");
+
+            // 一个iframe操作另一个iframe
+            // console.log($(window.frames["right"].document.body));
+            var abc = window.parent.document.querySelector("#right");
+            console.log(abc);
+            $("#right", parent.document.body).attr("src", $(this).data("url"));
+
         });
     })
 
@@ -158,7 +167,7 @@ function Tree(el, arr) {
                 for (var k = 0; k < arr[i].second[j].three.length; k++) {
                     var threeVal = arr[i].second[j].three[k].name;
                     var treeUrl = arr[i].second[j].three[k].url;
-                    var lii = $('<li class="tree-item-li" onclick="jump(' + treeUrl + ')">' + threeVal + '</li>');
+                    var lii = $('<li class="tree-item-li" data-url="' + treeUrl + '" onclick="jump(' + treeUrl + ')">' + threeVal + '</li>');
                     lii.appendTo(treeThree);
                 }
 

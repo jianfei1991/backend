@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>成功的iframe</title>
+    <link rel="stylesheet" href="./libs/css/tree.css">
+    <style type="text/css">
+        body { overflow: hidden; }
+    </style>
+</head>
+<body>
+    <!-- 页眉 -->
+    <header class="home-header">
+        <div class="home-logo">
+            <h1><a href=""><img src="./images/logo-crm.png" alt=""></a></h1>
+        </div>
+        <div class="home-header-news"><span>6</span></div>
+        <div class="home-header-usr">
+            <span>用户名</span>
+            <ul id="home-header-usr-ul" style="">
+                <li>用户信息</li>
+                <li>用户信息</li>
+                <li>用户信息</li>
+                <li>用户信息</li>
+            </ul>
+        </div>
+    </header>
+    <iframe src="./iframe-main.html" frameborder="0" scrolling="no" width="100%" style=""></iframe>
+
+    <frameset rows="70,*,10" frameborder="0" border="0" framespacing="0">
+        <frame src="./header.html" name="" id="" scrolling="no" style="background-color: red">
+        <!-- <frame src="" name="" id="" style="background-color: green">
+        <frame src="" name="" id="" style="background-color: blue"> -->
+    </frameset>
+</body>
+<!-- <body>
+你的渣渣浏览器不支持iframe
+</body> -->
+
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var innerH = document.body.clientHeight;
+        // 设置本页iframe的高度为可是区域剩余高度
+        document.querySelector("iframe").style.height = (innerH - 70) + "px";
+    </script>
+</html>

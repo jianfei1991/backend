@@ -2,42 +2,20 @@
 <html lang="zh-cmn-Hans">
 <head>
     <meta charset="UTF-8">
-    <title>框架集frameset和frame</title>
-    <link rel="stylesheet" href="./libs/css/tree.css">
+    <title>frame-main</title>
     <style type="text/css">
-        body { overflow: hidden; }
+        body { margin: 0; padding: 0; }
+        frameset { padding: 0; margin: 0; border: none; }
+        frame { width:100%; padding:0; margin:0; border:none; }
     </style>
-</head>
-<!-- <body> -->
-    <!-- 页眉 -->
-    <header class="home-header">
-        <div class="home-logo">
-            <h1><a href=""><img src="./images/logo-crm.png" alt=""></a></h1>
-        </div>
-        <div class="home-header-news"><span>6</span></div>
-        <div class="home-header-usr">
-            <span>用户名</span>
-            <ul id="home-header-usr-ul" style="">
-                <li>用户信息</li>
-                <li>用户信息</li>
-                <li>用户信息</li>
-                <li>用户信息</li>
-            </ul>
-        </div>
-    </header>
-    <iframe src="./frame-main.html" frameborder="0" scrolling="no" width="100%" style=""></iframe>
 
-    <frameset rows="70,*,10" frameborder="0" border="0" framespacing="0">
-        <frame src="./header.html" name="" id="" scrolling="no" style="background-color: red">
-        <!-- <frame src="" name="" id="" style="background-color: green">
-        <frame src="" name="" id="" style="background-color: blue"> -->
-    </frameset>
-<!-- </body> -->
+</head>
+<frameset cols="170,170,170,*" framespacing="0">
+    <frame src="./tree.html" name="frame-main-left" frameborder="no" border="0" framespacing="0" marginwidth="0" marginheight="0" noresize="true" scrolling="auto">
+    <frame src="./tree.html" name="frame-main-left" frameborder="no" border="0" framespacing="0" marginwidth="0" marginheight="0" noresize="true" scrolling="auto">
+    <frame src="./tree.html" name="frame-main-left" frameborder="no" border="0" framespacing="0" marginwidth="0" marginheight="0" noresize="true" scrolling="auto">
+    <frame src="./demo.html" name="frame-main-right" frameborder="no" border="0" framespacing="0" marginwidth="0" marginheight="0" noresize="true" scrolling="no">
+</frameset>
 <!-- <body>
-    <iframe src="./header.html" frameborder="0" style="width: 100%; height: 70px;"></iframe>
 </body> -->
-    <script type="text/javascript">
-        var innerH = document.body.clientHeight;
-        document.querySelector("iframe").style.height = (innerH - 70) + "px";
-    </script>
 </html>
