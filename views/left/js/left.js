@@ -29,6 +29,7 @@ $(function () {
             $(".tree-item-h3").each(function () {
                 if($(this).parent().find(".tree-two-box").length == 0) {
                     $(this).removeClass("tree-three-active");
+                    $(this).css("background-image", "none");
                 }
             })
 
