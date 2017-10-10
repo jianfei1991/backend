@@ -25,11 +25,35 @@ $(function () {
             // 开合转换
             $(this).parent().find(".tree-two-box").slideToggle();
 
+            // 去掉一级菜单的颜色
+            $(".tree-item-h3").each(function () {
+                if($(this).parent().find(".tree-two-box").length == 0) {
+                    $(this).removeClass("tree-three-active");
+                }
+            })
+
             // 如果没有二级菜单
             if ($(this).parent().find(".tree-item-h4").length == 0) {
                 console.log($(this).parent().find(".tree-three-box"));
                 $(this).parent().find(".tree-three-box").slideDown(1000);
                 $(this).parent().find(".tree-three-box").css("marginTop", 0);
+            }
+            // 如果只有一级菜单
+            if ($(this).parent().find(".tree-two-box").length == 0) {
+                // console.log($(this).parent().find(".tree-three-box"));
+                $(this).css("background-image", "none");
+
+                // 字体变色
+                $(this).parent().parent().find(".tree-item-h3").removeClass("tree-three-active");
+                $(this).toggleClass("tree-three-active");
+
+                // 去掉其他一级菜单的背景图
+                $(".tree-item-h3").each(function () {
+                    if($(this).parent().find(".tree-two-box").length == 0) {
+                        console.log("haha");
+                        $(this).css("background-image", "none");
+                    }
+                })
             }
 
             // 关闭其他同级菜单
@@ -90,6 +114,13 @@ $(function () {
     console.log($(".tree-item-h4").next().eq(33));
     $(".tree-item-h4").each(function () {
         if($(this).next().length == 0) {
+            console.log("haha");
+            $(this).css("background-image", "none");
+        }
+    })
+    // 如果只有一级菜单
+    $(".tree-item-h3").each(function () {
+        if($(this).parent().find(".tree-two-box").length == 0) {
             console.log("haha");
             $(this).css("background-image", "none");
         }
