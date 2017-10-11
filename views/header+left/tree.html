@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>导航栏 & Tree</title>
     <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-    <link rel="stylesheet" href="./css/tree.css">
+    <!-- <link rel="stylesheet" href="./css/tree.css"> -->
 </head>
 <body>
 <!-- 大容器 -->
@@ -31,12 +31,9 @@
 
     <div class="home-main">
         <div id="tree"></div>
-
-
-
     </div>
 </div>
-<!-- <div id="tree">
+<div id="tree">
     <div class="tree-box">
         <div class="tree-item">
             <h3 class="tree-item-h3">一级菜单</h3>
@@ -73,9 +70,30 @@
                 <li>
                     <h4 class="tree-item-h4">二级菜单</h4>
                     <ul class="tree-three-box">
-                        <li class="tree-item-li">三级菜单</li>
-                        <li class="tree-item-li">三级菜单</li>
-                        <li class="tree-item-li">三级菜单</li>
+                        <li class="tree-item-li">
+                            <h5>三级菜单</h5>
+                            <ul class="tree-item-box">
+                                <li class="tree-item-li">四级菜单</li>
+                                <li class="tree-item-li">四级菜单</li>
+                                <li class="tree-item-li">四级菜单</li>
+                            </ul>
+                        </li>
+                        <li class="tree-item-li">
+                            <h5>三级菜单</h5>
+                            <ul class="tree-item-box">
+                                <li class="tree-item-li">四级菜单</li>
+                                <li class="tree-item-li">四级菜单</li>
+                                <li class="tree-item-li">四级菜单</li>
+                            </ul>
+                        </li>
+                        <li class="tree-item-li">
+                            <h5>三级菜单</h5>
+                            <ul class="tree-item-box">
+                                <li class="tree-item-li">四级菜单</li>
+                                <li class="tree-item-li">四级菜单</li>
+                                <li class="tree-item-li">四级菜单</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li>
@@ -125,12 +143,14 @@
                 </li>
             </ul>
         </div>
+        <!-- 最后一个.tree-item结束 -->
     </div>
+    <!-- .tree-box结束 -->
+</div>
+<!-- #tree结束 -->
 
-</div> -->
-
-<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="./js/tree.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+    <!-- <script type="text/javascript" src="./js/tree.js"></script> -->
     <script type="text/javascript">
         Tree("#tree", [
             {

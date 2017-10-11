@@ -10,7 +10,8 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/left.js"></script>
     <script type="text/javascript">
-    var treeArr = [{
+    var treeArr = [
+        {
             first: { name: "城市111" },
             second: [{
                     title: { name: "车辆监控", url: "http://www.baidu.com" },
@@ -19,6 +20,55 @@
                         // 如果需要在新窗口中打开被链接，设置"_blank"  ；否则不设置或者设置为空
                         { name: "网点管理", url: "http://www.sina.com" },
                         { name: "充电桩管理", url: "http://www.smartisan.com" }
+                    ]
+                },
+                {
+                    title: { name: "车辆监控", url: "http://www.baidu.com" },
+                    three: [
+                        { name: "维修厂管理", url: "http://www.baidu.com" },
+                        { name: "网点管理", url: "http://www.baidu.com" },
+                        { name: "充电桩管理", url: "http://www.baidu.com" }
+                    ]
+                },
+                {
+                    title: { name: "车辆监控", url: "http://www.baidu.com" },
+                    three: [
+                        { name: "维修厂管理", url: "http://www.baidu.com" },
+                        { name: "网点管理", url: "http://www.baidu.com" },
+                        { name: "充电桩管理", url: "http://www.baidu.com" }
+                    ]
+                }
+            ]
+        },
+        {
+            first: { name: "城市111" },
+            second: [{
+                    title: { name: "车辆监控", url: "http://www.baidu.com" },
+                    three: [
+                        {
+                            title: {name: "维修厂管理", url: "left.html"},
+                            fourth: [
+                                { name: "四级菜单", url: "left.html"},
+                                { name: "四级菜单", url: "left.html"},
+                                { name: "四级菜单", url: "left.html"}
+                            ]
+                        },
+                        {
+                            title: {name: "网点管理", url: "http://www.sina.com"},
+                            fourth: [
+                                { name: "四级菜单", url: "left.html"},
+                                { name: "四级菜单", url: "left.html"},
+                                { name: "四级菜单", url: "left.html"}
+                            ]
+                        },
+                        {
+                            title: {name: "充电桩管理", url: "http://www.smartisan.com"},
+                            fourth: [
+                                { name: "四级菜单", url: "left.html"},
+                                { name: "四级菜单", url: "left.html"},
+                                { name: "四级菜单", url: "left.html"}
+                            ]
+                     }
                     ]
                 },
                 {
@@ -51,6 +101,33 @@
                 },
 
             ]
+        },
+        {
+            first: { name: "进度条", url: "./progress/progress.html" },
+        },
+        {
+            first: { name: "日历待修", url: "./date-time-picker.html" },
+        },
+        {
+            first: { name: "下拉选项", url: "./select.html" },
+        },
+        {
+            first: { name: "进度条", url: "./progress/progress.html" },
+        },
+        {
+            first: { name: "日历待修", url: "./date-time-picker.html" },
+        },
+        {
+            first: { name: "下拉选项", url: "./select.html" },
+        },
+        {
+            first: { name: "进度条", url: "./progress/progress.html" },
+        },
+        {
+            first: { name: "日历待修", url: "./date-time-picker.html" },
+        },
+        {
+            first: { name: "下拉选项", url: "./select.html" },
         },
         {
             first: { name: "进度条", url: "./progress/progress.html" },

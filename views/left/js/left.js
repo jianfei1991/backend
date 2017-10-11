@@ -25,6 +25,18 @@ $(function () {
             // 开合转换
             $(this).parent().find(".tree-two-box").slideToggle();
 
+            // bug-1
+            // 削减.tree-three-box的高度
+            $(".tree-two-box>li").each(function () {
+                if ($(this).find(".tree-item-h4").length == 0) {
+                    console.log($(this));
+                    var liHei = $(this).height();
+                    // $(this).height(liHei - 17);
+                    console.log($(this).height());
+                    console.log($(this).height()-16);
+                }
+            })
+
             // 去掉一级菜单的颜色
             $(".tree-item-h3").each(function () {
                 if($(this).parent().find(".tree-two-box").length == 0) {
@@ -102,10 +114,8 @@ $(function () {
             // window.location.href = $(this).data("url");
             // window.open($(this).data("url"), "_blank");
 
+            // 我的-切换内容
             // 一个iframe操作另一个iframe
-            // console.log($(window.frames["right"].document.body));
-            var abc = window.parent.document.querySelector("#right");
-            console.log(abc);
             $("#right", parent.document.body).attr("src", $(this).data("url"));
 
         });
@@ -137,12 +147,12 @@ $(function () {
     }
 })
 
-// 切换函数
-function jump(url){
-    document.getElementById('mainFrame').contentDocument.getElementById('rightFrame').src=url;
+// 切换函数 - 切换右侧内容
+function jump(url) {
+    document.getElementById("main").contentDocument.getElementById("right").src = url;
 }
 
-// 主函数
+// 主函数 - 生成菜单
 function Tree(el, arr) {
     // 生成内层容器、插入页面
     var treeBox = $('<div class="tree-box"></div>');
@@ -155,7 +165,7 @@ function Tree(el, arr) {
         var treeItem = $('<div class="tree-item"></div>');
         treeItem.appendTo(treeBox);
 
-        // 一级的
+        // 一级的title
         var first = arr[i].first.name;
         var h3 = $('<h3 class="tree-item-h3">' + first + '</h3>');
         h3.appendTo(treeItem);
@@ -201,10 +211,14 @@ function Tree(el, arr) {
                     var treeUrl = arr[i].second[j].three[k].url;
                     var lii = $('<li class="tree-item-li" data-url="' + treeUrl + '" onclick="jump(' + treeUrl + ')">' + threeVal + '</li>');
                     lii.appendTo(treeThree);
+
+                    // 四级菜单
                 }
 
-            }
-        }
+            }  // 二层循环结束
 
-    }
-};
+        }  // 二级菜单判断结束
+
+    }  // 一层循环结束
+
+};  // 函数结束
