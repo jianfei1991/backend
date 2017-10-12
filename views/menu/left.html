@@ -14,6 +14,7 @@
     var treeArr = [
         {
             name: "一级菜单",
+            url: "",
 
             next: [
                 { name: "二级菜单", url: "http://www.smartisan.com" },
@@ -29,7 +30,7 @@
                 {
                     name: "二级菜单",
                     next: [
-                        { name: "三级菜单", url: "left.html", target: "_blank" },
+                        { name: "三级菜单", url: "/left.html", target: "_blank" },
                         // 如果需要在新窗口中打开被链接，设置"_blank"  ；否则不设置或者设置为空
                         { name: "三级菜单", url: "http://www.sina.com" },
                         { name: "三级菜单", url: "http://www.smartisan.com" }
@@ -53,42 +54,42 @@
                             name: "三级菜单",  // .h5
                             next: [  // ul.tree-four-box
                                 // m
-                                // { name: "四级菜单", url: "left.html"},
+                                // { name: "四级菜单", url: "/left.html"},
                                 {
                                     name: "四级菜单",  // .h6
                                     next: [  // ul.tree-five-box
                                         // n
-                                        { name: "五级菜单", url: "left.html"},
-                                        { name: "五级菜单", url: "left.html"},
-                                        { name: "五级菜单", url: "left.html"}
+                                        { name: "五级菜单", url: "/views/left/left.html"},
+                                        { name: "五级菜单", url: "/views/left/left.html"},
+                                        { name: "五级菜单", url: "/views/left/left.html"}
                                     ]
                                 },
                                 {
                                     name: "四级菜单",  // .h6
                                     next: [  // ul.tree-five-box
                                         // n
-                                        { name: "五级菜单", url: "left.html"},
-                                        { name: "五级菜单", url: "left.html"},
-                                        { name: "五级菜单", url: "left.html"}
+                                        { name: "五级菜单", url: "/views/left/left.html"},
+                                        { name: "五级菜单", url: "/views/left/left.html"},
+                                        { name: "五级菜单", url: "/views/left/left.html"}
                                     ]
                                 },
-                                { name: "四级菜单", url: "left.html"},
+                                { name: "四级菜单", url: "/views/left/left.html"},
                             ]
                         },
                         {
                             name: "三级菜单",
                             next: [
-                                { name: "四级菜单", url: "left.html"},
-                                { name: "四级菜单", url: "left.html"},
-                                { name: "四级菜单", url: "left.html"}
+                                { name: "四级菜单", url: "/views/left/left.html"},
+                                { name: "四级菜单", url: "/views/left/left.html"},
+                                { name: "四级菜单", url: "/views/left/left.html"}
                             ]
                         },
                         {
                             name: "三级菜单",
                             next: [
-                                { name: "四级菜单", url: "left.html"},
-                                { name: "四级菜单", url: "left.html"},
-                                { name: "四级菜单", url: "left.html"}
+                                { name: "四级菜单", url: "/views/left/left.html"},
+                                { name: "四级菜单", url: "/views/left/left.html"},
+                                { name: "四级菜单", url: "/views/left/left.html"}
                             ]
                         }
                     ]
@@ -96,7 +97,7 @@
                 {
                     name: "二级菜单",
                     next: [
-                        { name: "三级菜单", url: "left.html", target: "_blank" },
+                        { name: "三级菜单", url: "/views/left/left.html", target: "_blank" },
                         // 如果需要在新窗口中打开被链接，设置"_blank"  ；否则不设置或者设置为空
                         { name: "三级菜单", url: "http://www.sina.com" },
                         { name: "三级菜单", url: "http://www.smartisan.com" }
@@ -105,7 +106,7 @@
                 {
                     name: "二级菜单",
                     next: [
-                        { name: "三级菜单", url: "left.html", target: "_blank" },
+                        { name: "三级菜单", url: "/views/left/left.html", target: "_blank" },
                         // 如果需要在新窗口中打开被链接，设置"_blank"  ；否则不设置或者设置为空
                         { name: "三级菜单", url: "http://www.sina.com" },
                         { name: "三级菜单", url: "http://www.smartisan.com" }
@@ -116,26 +117,27 @@
         {
             name: "一级菜单",
             next: [
-                { name: "二级菜单", url: "left.html", target: "_blank" },
+                { name: "二级菜单", url: "/views/left/left.html", target: "_blank" },
                 // 如果需要在新窗口中打开被链接，设置"_blank"  ；否则不设置或者设置为空
                 { name: "二级菜单", url: "http://www.sina.com" },
-                { name: "二级菜单", url: "http://www.smartisan.com" }
+                { name: "二级菜单", url: "" }
             ]
         },
-        { name: "进度条", url: "progress/progress.html" },
-        { name: "日历待修", url: "date-time-picker.html" },
-        { name: "下拉选项", url: "select.html" },
-        { name: "进度条", url: "progress/progress.html" },
-        { name: "日历待修", url: "date-time-picker.html" },
-        { name: "下拉选项", url: "select.html" },
-        { name: "进度条", url: "progress/progress.html" },
-        { name: "日历待修", url: "date-time-picker.html" },
-        { name: "下拉选项", url: "select.html" },
-        { name: "进度条", url: "progress/progress.html" },
-        { name: "日历待修", url: "date-time-picker.html" },
-        { name: "下拉选项", url: "select.html" }
+        { name: "进度条", url: "/views/progress/progress.html" },
+        { name: "日历待修", url: "/views/date-time-picker.html" },
+        { name: "下拉选项", url: "/views/select.html" },
+        { name: "进度条", url: "/views/progress/progress.html" },
+        { name: "日历待修", url: "/views/date-time-picker.html" },
+        { name: "下拉选项", url: "/views/select.html" },
+        { name: "进度条", url: "/views/progress/progress.html" },
+        { name: "日历待修", url: "/views/date-time-picker.html" },
+        { name: "下拉选项", url: "/views/select.html" },
+        { name: "进度条", url: "/views/progress/progress.html" },
+        { name: "日历待修", url: "/views/date-time-picker.html" },
+        { name: "下拉选项", url: "/views/select.html" }
     ];
     Tree("#tree", treeArr);
     </script>
+    <script type="text/javascript" src="./left-ready.js"></script>
 </body>
 </html>

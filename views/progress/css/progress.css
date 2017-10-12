@@ -217,6 +217,7 @@ body {
     padding: 0;
 
     height: 80px;
+    /*line-height: 80px;*/
     display: table;
 
     overflow: hidden;
@@ -224,6 +225,7 @@ body {
 .col-msg {
     max-width: 500px;
     color: #999;
+    /*line-height: 20px;*/
 }
 .msg-box .msg-item {
     display: block;

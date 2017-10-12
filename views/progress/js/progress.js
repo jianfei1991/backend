@@ -157,3 +157,17 @@ var Progress = function (obj) {
 
 }
 
+
+$(function () {
+    setInterval(() => {
+      if($(".col-msg").length != 0) {
+        $(".col-msg").each(function () {
+            if ($(this).height() <30) {
+                $(this).css("padding-top", 30);
+            } else {
+                $(this).css("padding-top", 20);
+            }
+        })
+      }
+    }, 20);
+})
