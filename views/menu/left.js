@@ -15,7 +15,7 @@ $(function () {
     var treeFiveBox = $(".tree-Five-box");
 
     // 修复阴影bug
-    $(".tree-last-box").addClass(".tree-last-box-2");
+    // $(".tree-last-box").addClass(".tree-last-box-2");
 
     // 控制二级菜单开合
     h3.each(function(i) {
@@ -38,11 +38,11 @@ $(function () {
             // 削减.tree-three-box的高度
             $(".tree-two-box>li").each(function () {
                 if ($(this).find(".tree-item-h4").length == 0) {
-                    console.log($(this));
+                    // console.log($(this));
                     var liHei = $(this).height();
                     // $(this).height(liHei - 17);
-                    console.log($(this).height());
-                    console.log($(this).height()-16);
+                    // console.log($(this).height());
+                    // console.log($(this).height()-16);
                 }
             })
 
@@ -158,8 +158,21 @@ $(function () {
     // 点击改变三级菜单字体颜色
     $(".tree-item-last").each(function () {
         $(this).click(function() {
-            $(".tree-item-last").removeClass("tree-three-active");
-            $(this).toggleClass("tree-three-active");
+            $(".tree-item-last").removeClass("tree-item-active");
+            $(this).toggleClass("tree-item-active");
+            // window.location.href = $(this).data("url");
+            // window.open($(this).data("url"), "_blank");
+
+            // 我的-切换内容
+            // 一个iframe操作另一个iframe
+            $("#right", parent.document.body).attr("src", $(this).data("url"));
+
+        });
+    })
+    $(".tree-single").each(function () {
+        $(this).click(function() {
+            $(".tree-single").removeClass("tree-item-active");
+            $(this).toggleClass("tree-item-active");
             // window.location.href = $(this).data("url");
             // window.open($(this).data("url"), "_blank");
 
@@ -194,14 +207,27 @@ $(function () {
         }
     }
 
+    // 调换位置
+    $(".tree-two-box").each(function () {
+        var _this = $(this).children;
+        _this.siblings().each(function () {
+            if ($(this).css("class")) {
+                var self = $(this);
+                self.find(".tree-item-last").each(function () {
+                    var that = $(this);
+                    that.appendTo(self);
+                });
+            }
+        })
+    })
+
+    // bug-3
     $(".tree-three-box").each(function () {
         if ($(this).siblings().find(".tree-last-box").length == 0 ) {
             $(this).css({"padding-top": 6, "padding-bottom": 6});
 
-            // console.log($(this).parent().prev().find(".tree-item-last").length);
-            // console.log($(this).parent().next().find(".tree-item-last").not("li .tree-item-last").length);
-            console.log($(this).parent().next());
-            console.log($(this).parent().next().find(".tree-item-last").length);
+            // console.log($(this).parent().next());
+            // console.log($(this).parent().next().find(".tree-item-last").length);
         } else if ($(this).parent().next().find(".tree-item-last").length != 0) {
             $(this).css({"padding-top": 6});
             var len = $(this).siblings().find(".tree-last-box").length;
@@ -305,7 +331,7 @@ function Tree(el, arr) {
 
                                             var fiveVal = arr[i].next[j].next[k].next[m].next[n].name;
                                             var fiveUrl = arr[i].next[j].next[k].next[m].next[n].url;
-                                            var liiii = $('<li class="tree-item-last" data-url="' + fiveUrl + '" onclick="jump(' + 'http://localhost:8888/' + fiveUrl + ')">' + fiveVal + '</li>');
+                                            var liiii = $('<li class="tree-item-last tree-single" data-url="' + fiveUrl + '" onclick="jump(' + 'http://localhost:8888/' + fiveUrl + ')">' + fiveVal + '</li>');
                                             liiii.appendTo(treeFive);
                                         }
 
@@ -313,8 +339,9 @@ function Tree(el, arr) {
                                         // 如果没有五级菜单或四级菜单，只展示四级菜单
                                         var liVal = arr[i].next[j].next[k].next[m].name;
                                         var liUrl = arr[i].next[j].next[k].next[m].url;
-                                        var liEl4 = $('<li class="tree-item-last" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</li>');
-                                        liEl4.css("background-color", "#dfe3e8");
+                                        // var liEl4 = $('<li class="tree-item-last" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</li>');
+                                        var liEl4 = $('<h6 class="tree-item-h6-single tree-single" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</h6>');
+                                        // liEl4.css("background-color", "#dfe3e8");
                                         liEl4.appendTo(treeFour);
 
                                         if (liEl4.siblings().find("ul").length == 0) {
@@ -329,11 +356,12 @@ function Tree(el, arr) {
 
                                 var liVal = arr[i].next[j].next[k].name;
                                 var liUrl = arr[i].next[j].next[k].url;
-                                var liEl3 = $('<li class="tree-item-last" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</li>');
+                                // var liEl3 = $('<li class="tree-item-last" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</li>');
+                                var liEl3 = $('<h5 class="tree-item-h5-single tree-single" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</h5>');
                                 liEl3.appendTo(treeThree);
 
                                 if (liEl3.siblings().find("ul").length == 0) {
-                                    liEl3.css("background-color", "#dfe3e8");
+                                    // liEl3.css("background-color", "#dfe3e8");
                                     treeThree.addClass("tree-last-box");
                                 }
 
@@ -350,18 +378,19 @@ function Tree(el, arr) {
                     var liUrl = arr[i].next[j].url;
 
                     if (!!liUrl) {
-                        var liEl2 = $('<li class="tree-item-last" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</li>');
+                        // var liEl2 = $('<li class="tree-item-last" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</li>');
+                        var liEl2 = $('<h4 class="tree-item-h4-single tree-single" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8888/' + liUrl + ')">' + liVal + '</h4>');
                     } else {
                         var liEl2 = $('<li class="tree-item-last">' + liVal + '</li>');
 
                     }
-                    liEl2.css("background-color", "#dfe3e8");
+                    // liEl2.css("background-color", "#dfe3e8");
                     liEl2.appendTo(treeTwo);
 
                     if (liEl2.siblings().find("ul").length == 0) {
                         treeTwo.addClass("tree-last-box");
                     } else {
-
+                        treeTwo.removeClass("tree-last-box");
                     }
 
                 }  // 这个大括号看注释

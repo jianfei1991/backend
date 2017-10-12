@@ -66,7 +66,7 @@ body {
 .tree-item-h4 {
     /*height: 20px;*/
     line-height: 20px;
-    margin: 7px 0;
+    padding: 7px 0;
     padding-left: 41px;
     color: #465064;
 
@@ -75,11 +75,24 @@ body {
     font-weight: 500;
     background: transparent url(./images/mid-r.png) 30px center no-repeat;
 }
+/*等价二级标题*/
+.tree-item-h4-single {
+    /*height: 20px;*/
+    line-height: 20px;
+    padding: 7px 0;
+    padding-left: 41px;
+    color: #465064;
+
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    font-weight: 500;
+    /*background: transparent url(./images/mid-r.png) 30px center no-repeat;*/
+}
 /*三级标题*/
 .tree-item-h5 {
     /*height: 20px;*/
     line-height: 20px;
-    margin: 5px 0;
+    padding: 7px 0;
     padding-left: 54px;
     color: #465064;
 
@@ -87,11 +100,23 @@ body {
     font-weight: 500;
     background: transparent url(./images/mid-r.png) 43px center no-repeat;
 }
+/*等价三级标题*/
+.tree-item-h5-single {
+    /*height: 20px;*/
+    line-height: 20px;
+    padding: 7px 0;
+    padding-left: 54px;
+    color: #465064;
+
+    font-size: 14px;
+    font-weight: 500;
+    /*background: transparent url(./images/mid-r.png) 43px center no-repeat;*/
+}
 /*四级标题*/
 .tree-item-h6 {
     /*height: 20px;*/
     line-height: 20px;
-    margin: 5px 0;
+    padding: 7px 0;
     padding-left: 65.8px;
     color: #465064;
 
@@ -99,8 +124,20 @@ body {
     font-weight: 500;
     background: transparent url(./images/mid-r.png) 55px center no-repeat;
 }
+/*等价四级标题*/
+.tree-item-h6-single {
+    /*height: 20px;*/
+    line-height: 20px;
+    padding: 7px 0;
+    padding-left: 65.8px;
+    color: #465064;
+
+    font-size: 13px;
+    font-weight: 500;
+    /*background: transparent url(./images/mid-r.png) 55px center no-repeat;*/
+}
 .tree-two-box li:first-of-type .tree-item-h4 {
-    margin-top: 5px;
+    /*margin-top: 5px;*/
 }
 .tree-two-box,
 .tree-three-box,
@@ -108,18 +145,6 @@ body {
 .tree-five-box {
     display: none;
     overflow: hidden;
-}
-/*二级菜单容器*/
-.tree-two-box {
-    padding: 6px 0;
-}
-/*三级菜单容器*/
-.tree-three-box {
-    padding: 6px 0;
-}
-/*四级级菜单容器*/
-.tree-four-box {
-    padding: 6px 0;
 }
 /*五级菜单容器*/
 .tree-five-box {
@@ -134,14 +159,6 @@ body {
                 inset 0 0 0 0 #ccc, /*底部阴影*/
                 inset 0 0 0 0 #ccc; /*右边阴影*/
 }
-.tree-last-box-2 {
-    /*padding: 10px 0;*/
-    background-color: #dfe3e8;
-    box-shadow: inset 0 0 0 0 #ccc, /*顶部阴影*/
-                inset 0 3px 3px 0 #ccc, /*左边阴影*/
-                inset 0 0 0 0 #ccc, /*底部阴影*/
-                inset 0 0 0 0 #ccc; /*右边阴影*/
-}
 /*五级标题*/
 .tree-item-last {
     line-height: 13px;
@@ -149,6 +166,46 @@ body {
     padding-left: 77px;
 
     background: transparent url(./images/dashed.png) 67px center no-repeat;
+}
+/*非五级标题*/
+.tree-last-box h4 {
+    line-height: 20px;
+    padding: 7px 0;
+    padding-left: 41px;
+
+    background: transparent url(./images/dashed.png) 31px center no-repeat;
+}
+.tree-last-box h4:first-of-type {
+    padding-top: 14px;
+}
+.tree-last-box h4:last-of-type {
+    padding-bottom: 14px;
+}
+.tree-last-box h5 {
+    line-height: 20px;
+    padding: 7px 0;
+    padding-left: 54px;
+
+    background: transparent url(./images/dashed.png) 44px center no-repeat;
+}
+.tree-last-box h5:first-of-type {
+    padding-top: 14px;
+}
+.tree-last-box h5:last-of-type {
+    padding-bottom: 14px;
+}
+.tree-last-box h6 {
+    line-height: 18px;
+    padding: 7px 0;
+    padding-left: 65px;
+
+    background: transparent url(./images/dashed.png) 55px center no-repeat;
+}
+.tree-last-box h6:first-of-type {
+    padding-top: 14px;
+}
+.tree-last-box h6:last-of-type {
+    padding-bottom: 14px;
 }
 .tree-three-box .tree-three-active {
     color: #0db95f;

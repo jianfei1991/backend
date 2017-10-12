@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>菜单列表</title>
-    <link rel="stylesheet" href="./tree-demo.css">
+    <link rel="stylesheet" href="./left.css">
 </head>
 <body>
     <div id="tree"></div>
@@ -16,6 +16,7 @@
             name: "一级菜单",
 
             next: [
+                { name: "二级菜单", url: "http://www.smartisan.com" },
                 {
                     name: "二级菜单",
                     next: [
@@ -34,24 +35,9 @@
                         { name: "三级菜单", url: "http://www.smartisan.com" }
                     ]
                 },
-                {
-                    name: "二级菜单",
-                    // next: [
-                    //     { name: "三级菜单", url: "left.html", target: "_blank" },
-                    //     // 如果需要在新窗口中打开被链接，设置"_blank"  ；否则不设置或者设置为空
-                    //     { name: "三级菜单", url: "http://www.sina.com" },
-                    //     { name: "三级菜单", url: "http://www.smartisan.com" }
-                    // ]
-                },
-                {
-                    name: "二级菜单",
-                    // next: [
-                    //     { name: "三级菜单", url: "left.html", target: "_blank" },
-                    //     // 如果需要在新窗口中打开被链接，设置"_blank"  ；否则不设置或者设置为空
-                    //     { name: "三级菜单", url: "http://www.sina.com" },
-                    //     { name: "三级菜单", url: "http://www.smartisan.com" }
-                    // ]
-                }
+                { name: "二级菜单", url: "http://www.smartisan.com" },
+                { name: "二级菜单", url: "http://www.smartisan.com" }
+
             ]
         },
         // i
@@ -136,9 +122,18 @@
                 { name: "二级菜单", url: "http://www.smartisan.com" }
             ]
         },
-        { name: "进度条", url: "./progress/progress.html" },
-        { name: "日历待修", url: "./date-time-picker.html" },
-        { name: "下拉选项", url: "./select.html" }
+        { name: "进度条", url: "progress/progress.html" },
+        { name: "日历待修", url: "date-time-picker.html" },
+        { name: "下拉选项", url: "select.html" },
+        { name: "进度条", url: "progress/progress.html" },
+        { name: "日历待修", url: "date-time-picker.html" },
+        { name: "下拉选项", url: "select.html" },
+        { name: "进度条", url: "progress/progress.html" },
+        { name: "日历待修", url: "date-time-picker.html" },
+        { name: "下拉选项", url: "select.html" },
+        { name: "进度条", url: "progress/progress.html" },
+        { name: "日历待修", url: "date-time-picker.html" },
+        { name: "下拉选项", url: "select.html" }
     ];
     Tree("#tree", treeArr);
     </script>
