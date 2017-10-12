@@ -60,7 +60,7 @@ body {
     font-size: 16px;
     font-weight: 550;
     font-family: PingFangSC-Medium;
-    background: transparent url(../images/big-r.png) 14.5px center no-repeat;
+    background: transparent url(./images/big-r.png) 14.5px center no-repeat;
 }
 /*二级标题*/
 .tree-item-h4 {
@@ -73,7 +73,7 @@ body {
     font-family: PingFangSC-Regular;
     font-size: 14px;
     font-weight: 500;
-    background: transparent url(../images/mid-r.png) 30px center no-repeat;
+    background: transparent url(./images/mid-r.png) 30px center no-repeat;
 }
 /*三级标题*/
 .tree-item-h5 {
@@ -85,7 +85,7 @@ body {
 
     font-size: 14px;
     font-weight: 500;
-    background: transparent url(../images/mid-r.png) 43px center no-repeat;
+    background: transparent url(./images/mid-r.png) 43px center no-repeat;
 }
 /*四级标题*/
 .tree-item-h6 {
@@ -97,7 +97,7 @@ body {
 
     font-size: 13px;
     font-weight: 500;
-    background: transparent url(../images/mid-r.png) 55px center no-repeat;
+    background: transparent url(./images/mid-r.png) 55px center no-repeat;
 }
 .tree-two-box li:first-of-type .tree-item-h4 {
     margin-top: 5px;
@@ -148,7 +148,7 @@ body {
     padding: 7px 0;
     padding-left: 77px;
 
-    background: transparent url(../images/dashed.png) 67px center no-repeat;
+    background: transparent url(./images/dashed.png) 67px center no-repeat;
 }
 .tree-three-box .tree-three-active {
     color: #0db95f;

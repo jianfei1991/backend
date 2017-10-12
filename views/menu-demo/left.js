@@ -50,18 +50,15 @@ $(function () {
             $(".tree-item-h3").each(function () {
                 if($(this).parent().find(".tree-two-box").length == 0) {
                     $(this).removeClass("tree-three-active");
-                    // $(this).css("background-image", "none");
+                    $(this).css("background-image", "none");
                 }
             })
 
-            // bug-2
-            // 如果没有二级菜单
-            if ($(this).parent().find(".tree-item-h4").length == 0) {
-                $(this).parent().find(".tree-three-box").slideToggle();
-                // $(this).parent().find(".tree-three-box").css("marginTop", 0);
-            }
+
             // 如果只有一级菜单
-            if ($(this).parent().find(".tree-two-box").length == 0) {
+            // if ($(this).parent().find(".tree-two-box").length == 0) {
+            if ($(this).parent().find("ul").length == 0) {
+                console.log("ahha");
                 // console.log($(this).parent().find(".tree-three-box"));
                 $(this).css("background-image", "none");
 
