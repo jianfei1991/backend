@@ -151,7 +151,7 @@ function Tree(el, arr) {
                         // var liEl2 = $('<li class="tree-item-last" data-url="' + liUrl + '" onclick="jump(' + 'http://localhost:8080' + liUrl + ')">' + liVal + '</li>');
                         var liEl2 = $('<h4 class="tree-item-h4-single tree-single tree-jump" data-url="' + liUrl + '" onclick="jump(\'' + rootPath + liUrl + '\')">' + liVal + '</h4>');
                     } else {
-                        var liEl2 = $('<li class="tree-item-h4-single tree-single">' + liVal + '</li>');
+                        var liEl2 = $('<h4 class="tree-item-h4-single tree-single">' + liVal + '</h4>');
 
                     }
                     // liEl2.css("background-color", "#dfe3e8");
