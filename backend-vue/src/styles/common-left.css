@@ -17,7 +17,7 @@ body {
 
 /*外层容器*/
 #tree {
-    width: 170px;
+    width: 200px;
     height: 100%;
     /*background-color: #eaedf0;*/
 
@@ -25,7 +25,7 @@ body {
 }
 /*内层容器*/
 .tree-box {
-    width: 170px;
+    width: 200px;
     height: 100%;
     padding: 25px 0;
     background-color: #eaedf0;
@@ -61,7 +61,7 @@ body {
     font-size: 16px;
     font-weight: 550;
     font-family: PingFangSC-Medium;
-    background: transparent url(./images/big-r.png) 14.5px center no-repeat;
+    background: transparent url(../assets/images/left/big-r.png) 14.5px center no-repeat;
 }
 /*二级标题*/
 .tree-item-h4 {
@@ -74,7 +74,7 @@ body {
     font-family: PingFangSC-Regular;
     font-size: 14px;
     font-weight: 500;
-    background: transparent url(./images/mid-r.png) 30px center no-repeat;
+    background: transparent url(../assets/images/left/mid-r.png) 30px center no-repeat;
 }
 /*等价二级标题*/
 .tree-item-h4-single {
@@ -87,7 +87,7 @@ body {
     font-family: PingFangSC-Regular;
     font-size: 14px;
     font-weight: 500;
-    /*background: transparent url(./images/mid-r.png) 30px center no-repeat;*/
+    /*background: transparent url(../assets/images/left/mid-r.png) 30px center no-repeat;*/
 }
 /*三级标题*/
 .tree-item-h5 {
@@ -99,7 +99,7 @@ body {
 
     font-size: 14px;
     font-weight: 500;
-    background: transparent url(./images/mid-r.png) 43px center no-repeat;
+    background: transparent url(../assets/images/left/mid-r.png) 43px center no-repeat;
 }
 /*等价三级标题*/
 .tree-item-h5-single {
@@ -111,7 +111,7 @@ body {
 
     font-size: 14px;
     font-weight: 500;
-    /*background: transparent url(./images/mid-r.png) 43px center no-repeat;*/
+    /*background: transparent url(../assets/images/left/mid-r.png) 43px center no-repeat;*/
 }
 /*四级标题*/
 .tree-item-h6 {
@@ -123,7 +123,7 @@ body {
 
     font-size: 13px;
     font-weight: 500;
-    background: transparent url(./images/mid-r.png) 55px center no-repeat;
+    background: transparent url(../assets/images/left/mid-r.png) 55px center no-repeat;
 }
 /*等价四级标题*/
 .tree-item-h6-single {
@@ -135,7 +135,7 @@ body {
 
     font-size: 13px;
     font-weight: 500;
-    /*background: transparent url(./images/mid-r.png) 55px center no-repeat;*/
+    /*background: transparent url(../assets/images/left/mid-r.png) 55px center no-repeat;*/
 }
 .tree-two-box li:first-of-type .tree-item-h4 {
     /*margin-top: 5px;*/
@@ -144,7 +144,7 @@ body {
 .tree-three-box,
 .tree-four-box,
 .tree-five-box {
-    display: none;
+    /*display: none;*/
     overflow: hidden;
 }
 /*五级菜单容器*/
@@ -166,7 +166,7 @@ body {
     padding: 7px 0;
     padding-left: 77px;
 
-    background: transparent url(./images/dashed.png) 67px center no-repeat;
+    background: transparent url(../assets/images/left/dashed.png) 67px center no-repeat;
 }
 /*非五级标题*/
 .tree-last-box h4 {
@@ -174,7 +174,7 @@ body {
     padding: 7px 0;
     padding-left: 41px;
 
-    background: transparent url(./images/dashed.png) 31px center no-repeat;
+    background: transparent url(../assets/images/left/dashed.png) 31px center no-repeat;
 }
 .tree-last-box h4:first-of-type {
     padding-top: 14px;
@@ -187,7 +187,7 @@ body {
     padding: 7px 0;
     padding-left: 54px;
 
-    background: transparent url(./images/dashed.png) 44px center no-repeat;
+    background: transparent url(../assets/images/left/dashed.png) 44px center no-repeat;
 }
 .tree-last-box h5:first-of-type {
     padding-top: 14px;
@@ -200,7 +200,7 @@ body {
     padding: 7px 0;
     padding-left: 65px;
 
-    background: transparent url(./images/dashed.png) 55px center no-repeat;
+    background: transparent url(../assets/images/left/dashed.png) 55px center no-repeat;
 }
 .tree-last-box h6:first-of-type {
     padding-top: 14px;

@@ -19,17 +19,17 @@ $(function () {
         $(this).click(function() {
 
             // 改变小图标方向
-            $(this).parent().siblings().find(".tree-item-h3").css("background-image", "url(./images/big-r.png)");
+            $(this).parent().siblings().find(".tree-item-h3").css("background-image", "url(./static/images/big-r.png)");
             if ($(this).css("background-image").indexOf("big-r.png") != -1) {
-                $(this).css("background-image", "url(./images/big-l.png)");
+                $(this).css("background-image", "url(./static/images/big-l.png)");
             } else {
-                h3.css("background-image", "url(./images/big-r.png)");
-                $(this).css("background-image", "url(./images/big-r.png)");
+                h3.css("background-image", "url(./static/images/big-r.png)");
+                $(this).css("background-image", "url(./static/images/big-r.png)");
 
             }
 
             // 开合转换
-            $(this).parent().find(".tree-two-box").slideToggle();
+            // $(this).parent().find(".tree-two-box").slideToggle();
 
             // 去掉一级菜单的颜色
             $(".tree-item-h3").each(function () {
@@ -71,12 +71,12 @@ $(function () {
             console.log($(this));
 
             // 改变小图标方向
-            $(this).parent().siblings().find(".tree-item-h4").css("background-image", "url(./images/mid-r.png)");
+            $(this).parent().siblings().find(".tree-item-h4").css("background-image", "url(./static/images/mid-r.png)");
             if ($(this).css("background-image").indexOf("mid-r") != -1) {
-                $(this).css("background-image", "url(./images/mid-l.png");
+                $(this).css("background-image", "url(./static/images/mid-l.png");
             } else {
-                h4.css("background-image", "url(./images/mid-r.png)");
-                $(this).css("background-image", "url(./images/mid-r.png)");
+                h4.css("background-image", "url(./static/images/mid-r.png)");
+                $(this).css("background-image", "url(./static/images/mid-r.png)");
             }
 
             // 开合转换
@@ -93,12 +93,12 @@ $(function () {
             console.log($(this));
 
             // 改变小图标方向
-            $(this).parent().siblings().find(".tree-item-h5").css("background-image", "url(./images/mid-r.png)");
+            $(this).parent().siblings().find(".tree-item-h5").css("background-image", "url(./static/images/mid-r.png)");
             if ($(this).css("background-image").indexOf("mid-r") != -1) {
-                $(this).css("background-image", "url(./images/mid-l.png");
+                $(this).css("background-image", "url(./static/images/mid-l.png");
             } else {
-                h5.css("background-image", "url(./images/mid-r.png)");
-                $(this).css("background-image", "url(./images/mid-r.png)");
+                h5.css("background-image", "url(./static/images/mid-r.png)");
+                $(this).css("background-image", "url(./static/images/mid-r.png)");
             }
 
             // 开合转换
@@ -115,12 +115,12 @@ $(function () {
             console.log($(this));
 
             // 改变小图标方向
-            $(this).parent().siblings().find(".tree-item-h6").css("background-image", "url(./images/mid-r.png)");
+            $(this).parent().siblings().find(".tree-item-h6").css("background-image", "url(./static/images/mid-r.png)");
             if ($(this).css("background-image").indexOf("mid-r") != -1) {
-                $(this).css("background-image", "url(./images/mid-l.png");
+                $(this).css("background-image", "url(./static/images/mid-l.png");
             } else {
-                h6.css("background-image", "url(./images/mid-r.png)");
-                $(this).css("background-image", "url(./images/mid-r.png)");
+                h6.css("background-image", "url(./static/images/mid-r.png)");
+                $(this).css("background-image", "url(./static/images/mid-r.png)");
             }
 
             // 开合转换
@@ -167,7 +167,7 @@ $(function () {
     // 如果只有一级菜单
     $(".tree-item-h3").each(function () {
         if($(this).parent().find(".tree-two-box").length == 0) {
-            // $(this).css("background-image", "none");
+            $(this).css("background-image", "none");
         }
     })
 
@@ -180,6 +180,24 @@ $(function () {
         }
     }
 
+    // 2017-10-16
+    // 手动添加.tree-last-box
+    $(".tree-two-box").each(function () {
+        if($(this).find("ul").length == 0) {
+            $(this).addClass("tree-last-box");
+        }
+    })
+    $(".tree-three-box").each(function () {
+        if($(this).find("ul").length == 0) {
+            $(this).addClass("tree-last-box");
+        }
+    })
+    $(".tree-four-box").each(function () {
+        if($(this).find("ul").length == 0) {
+            $(this).addClass("tree-last-box");
+        }
+    })
+
 })
 
 // 切换函数 - 切换右侧内容
@@ -187,4 +205,5 @@ function jump(url) {
     // document.getElementById("main").contentDocument.getElementById("right").src = url;
     $("#right", parent.document.body).attr("src", url);
 }
+
 
