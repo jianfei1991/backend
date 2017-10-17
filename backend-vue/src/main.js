@@ -13,7 +13,7 @@ import Default from "./pages/Default"
 import Demo from "./pages/Demo"
 
 // 设置eventbus来传值
-var eventBus = new Vue()
+window.eventBus = new Vue()
 
 let a = [
     // {path: "", component: Login},

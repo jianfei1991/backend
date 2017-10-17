@@ -7,25 +7,25 @@
                     <!-- 一级菜单 -->
                     <h3 class="tree-item-h3" v-text="item1.name" @click="toggleTwo()"></h3>
                     <!-- 二级菜单容器 -->
-                    <ul class="tree-two-box" v-if="item1.next != undefined" v-showf="twoShow">
+                    <ul class="tree-two-box" v-if="item1.next != undefined" data-showf="twoShow">
                         <!-- 二条目 -->
                         <li v-for="item2 in item1.next" v-show="item2.next != undefined">
                             <!-- 二级菜单 -->
                             <h4 class="tree-item-h4" v-text="item2.name" @click="toggleThree()"></h4>
                             <!-- 三级菜单容器 -->
-                            <ul class="tree-three-box" v-if="item2.next != undefined" v-showf="threeShow">
+                            <ul class="tree-three-box" v-if="item2.next != undefined" data-showf="threeShow">
                                 <!-- 三条目 -->
                                 <li v-for="item3 in item2.next" v-show="item3.next != undefined">
                                     <!-- 三级菜单 -->
                                     <h5 class="tree-item-h5" v-text="item3.name" @click="toggleFour()"></h5>
                                     <!-- 四级菜单容器 -->
-                                    <ul class="tree-four-box" v-if="item3.next != undefined" v-showf="fourShow">
+                                    <ul class="tree-four-box" v-if="item3.next != undefined" data-showf="fourShow">
                                         <!-- 四条目 -->
                                         <li v-for="item4 in item3.next" v-show="item4.next != undefined">
                                             <!-- 四级菜单 -->
                                             <h6 class="tree-item-h6" v-text="item4.name" @click="toggleFive()"></h6>
                                             <!-- 五级菜单容器 -->
-                                            <ul class="tree-five-box tree-last-box" v-if="item4.next != undefined" v-showf="fiveShow">
+                                            <ul class="tree-five-box tree-last-box" v-if="item4.next != undefined" data-showf="fiveShow">
                                                 <!-- 五级菜单 -->
                                                 <li class="tree-item-last" v-for="item5 in item4.next" v-text="item5.name">{{ item5.name }}</li>
                                             </ul>
@@ -36,7 +36,8 @@
                                 <h5 class="tree-item-h5-single tree-single" v-for="item3 in item2.next" v-show="item3.next == undefined"> {{ item3.name }}</h5>
                             </ul>
                         </li>
-                        <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined"><router-link to="/Demo" :data-url="item2.url" @click="sendUrl()">{{ item2.name }}</router-link></h4>
+                        <!-- <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined"><router-link to="/Demo" :data-url="item2.url" @click="sendUrl()">{{ item2.name }}</router-link></h4> -->
+                        <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined" :data-url="item2.url" @click="sendUrl($event)">{{ item2.name }}</h4>
                     </ul>
                 </div>
             </div>
@@ -48,16 +49,15 @@
 
 <script>
     import left from "../methods/left.js"
-    console.log("haha");
-
     import leftReady from "../methods/left-ready.js"
 
     export default {
         methods: {
-            sendUrl () {
-                console.log("haha");
-                enevtBus.$emit("eBus", "e.target.getAttribute()");
-                // enevtBus.$emit("eventBus", e.target.getAttribute());
+            sendUrl (e) {
+                console.log("sendUrl");
+                console.log(e.target.getAttribute("data-url"));
+                // eventBus.$emit("eBus", "e.target.getAttribute()");
+                eventBus.$emit("eBus", e.target.getAttribute("data-url"));
             },
             toggleTwo () {
                 this.twoShow = !this.twoShow;

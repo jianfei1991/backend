@@ -154,10 +154,9 @@ $(function () {
     })
 
     // 如果只有二级菜单
-    console.log($(".tree-item-h4").next().eq(33));
+    // console.log($(".tree-item-h4").next().eq(33));
     $(".tree-item-h4").each(function () {
         if($(this).next().length == 0) {
-            console.log("haha");
             // $(this).css("background-image", "none");
         }
     })

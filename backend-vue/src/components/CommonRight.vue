@@ -3,7 +3,7 @@
         <div class="common-right-wrapper">
             <!-- <router-view></router-view> -->
             <h1>CommonRigth: {{ rightUrl}}</h1>
-            <view-iframe :receiveUrl="rightUrl"></view-iframe>
+            <view-iframe :receiveurl="rightUrl"></view-iframe>
 
             <!-- <div class="haha">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam recusandae magnam veniam! Rerum quo sed reiciendis vero, suscipit aliquam? Consectetur vero deserunt molestiae, autem incidunt eligendi ad ab ipsa excepturi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione repudiandae, perferendis iure, aspernatur eligendi in minima pariatur natus labore modi, nesciunt molestias nisi minus assumenda nulla a, sint distinctio commodi.</div> -->
         </div>
@@ -16,17 +16,27 @@
     export default {
         data () {
             return {
-                // 可在这设置右侧默认页面
                 rightUrl: "http://t.tt",
+                a: 12
             }
         },
         components: {
             ViewIframe,
         },
         created () {
-            enevtBus.$on("eBus", function (a) {
-                this.rightUrl = a;
+            var target = this.$data;
+            eventBus.$on("eBus", function (a) {
+                console.log("a:"+a);
+                target.rightUrl = a;
             })
+            console.log(this.$data);
+            console.log(this.$data.a);
+            console.log(this.$data.rightUrl);
+        },
+        watch: {
+            rightUrl: function (val) {
+                // console.log(val);
+            }
         }
     }
 </script>
