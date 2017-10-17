@@ -3,7 +3,22 @@
 import Vue from "vue"
 import App from "./App"
 
+import VueRouter from "vue-router"
+Vue.use(VueRouter)
+
 import $ from "jquery"
+
+import Default from "./pages/Default"
+import Demo from "./pages/Demo"
+
+let a = [
+    {path: "", component: Default},
+    {path: "/Demo", component: Demo}
+]
+
+let router = new VueRouter({
+    routes: a
+})
 
 Vue.config.productionTip = false
 
@@ -11,5 +26,7 @@ Vue.config.productionTip = false
 new Vue({
     el: "#app",
     template: "<App/>",
-    components: { App }
+    components: { App },
+
+    router: router
 })

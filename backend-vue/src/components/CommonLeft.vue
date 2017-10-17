@@ -36,7 +36,7 @@
                                 <h5 class="tree-item-h5-single tree-single" v-for="item3 in item2.next" v-show="item3.next == undefined"> {{ item3.name }}</h5>
                             </ul>
                         </li>
-                        <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined">{{ item2.name }}</h4>
+                        <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined"><router-link to="/Demo">{{ item2.name }}</router-link></h4>
                     </ul>
                 </div>
             </div>

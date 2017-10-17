@@ -4,8 +4,8 @@
         <!-- <hello-world/> -->
         <common-header></common-header>
         <common-left></common-left>
-        <common-right></common-right>
         <!-- <common-left-demo></common-left-demo> -->
+        <common-right></common-right>
     </div>
 </template>
 

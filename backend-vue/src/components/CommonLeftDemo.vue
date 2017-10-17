@@ -100,5 +100,13 @@
 </script>
 
 <style scoped>
+.common-left {
+        float: left;
+
+        width: 200px;
+        height: 100%;
+        padding-top: 70px;
+        margin-top: -70px;
+    }
     @import "../styles/common-left.css";
 </style>

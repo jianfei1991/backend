@@ -39,25 +39,22 @@ $(function () {
                 }
             })
 
-
             // 如果只有一级菜单
             // if ($(this).parent().find(".tree-two-box").length == 0) {
             if ($(this).parent().find("ul").length == 0) {
                 console.log("ahha");
-                // console.log($(this).parent().find(".tree-three-box"));
                 $(this).css("background-image", "none");
 
                 // 字体变色
                 $(this).parent().parent().find(".tree-item-h3").removeClass("tree-item-active");
                 $(this).toggleClass("tree-item-active");
-
-                // 去掉其他一级菜单的背景图
-                $(".tree-item-h3").each(function () {
-                    if($(this).parent().find(".tree-two-box").length == 0) {
-                        $(this).css("background-image", "none");
-                    }
-                })
             }
+            // 去掉其他一级菜单的背景图
+            $(".tree-item-h3").each(function () {
+                if($(this).parent().find(".tree-two-box").length == 0) {
+                    $(this).css("background-image", "none");
+                }
+            })
 
             // 关闭其他同级菜单
             $(this).parent().siblings().find(".tree-two-box").slideUp();
