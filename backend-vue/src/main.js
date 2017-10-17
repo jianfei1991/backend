@@ -8,11 +8,16 @@ Vue.use(VueRouter)
 
 import $ from "jquery"
 
+// import Login from "./pages/Login"
 import Default from "./pages/Default"
 import Demo from "./pages/Demo"
 
+// 设置eventbus来传值
+var eventBus = new Vue()
+
 let a = [
-    {path: "", component: Default},
+    // {path: "", component: Login},
+    // {path: "", component: Default},
     {path: "/Demo", component: Demo}
 ]
 

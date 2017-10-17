@@ -20,6 +20,7 @@ body {
     width: 200px;
     height: 100%;
     /*background-color: #eaedf0;*/
+    border-right: 1px solid #ccc;
 
     overflow: hidden;
 }
@@ -144,7 +145,7 @@ body {
 .tree-three-box,
 .tree-four-box,
 .tree-five-box {
-    /*display: none;*/
+    display: none;
     overflow: hidden;
 }
 /*五级菜单容器*/

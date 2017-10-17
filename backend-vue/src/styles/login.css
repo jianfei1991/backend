@@ -9,7 +9,7 @@ html, body { width: 100%; height: 100%; position: relative; }
     height: 100%;
     /*line-height: 100%;*/
     position: relative;
-    background-image: url(../images/Gofun.png);
+    background-image: url(../assets/images/login/Gofun.png);
 }
 /*小容器*/
 .login-main {
@@ -35,7 +35,7 @@ html, body { width: 100%; height: 100%; position: relative; }
 .login-logo-image {
     width: 100%;
     height: 100%;
-    background: transparent url(../images/logo-crm.png) 170px 34px no-repeat;
+    background: transparent url(../assets/images/login/logo-crm.png) 170px 34px no-repeat;
     -webkit-background-size: 141px 82px;
     background-size: 141px 82px;
 }

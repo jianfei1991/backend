@@ -2,6 +2,7 @@
     <div id="app">
         <!-- <img src="./assets/logo.png"> -->
         <!-- <hello-world/> -->
+        <!-- <login></login> -->
         <common-header></common-header>
         <common-left></common-left>
         <!-- <common-left-demo></common-left-demo> -->
@@ -11,6 +12,7 @@
 
 <script>
     import HelloWorld from "./components/HelloWorld"
+    import Login from "./pages/Login.vue"
     import CommonHeader from "./components/CommonHeader"
     import CommonLeft from "./components/CommonLeft"
     import CommonRight from "./components/CommonRight"
@@ -20,6 +22,7 @@
         name: "app",
         components: {
             HelloWorld,
+            Login,
             CommonHeader,
             CommonLeft,
             CommonRight,
@@ -36,7 +39,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         /*text-align: center;*/
-        color: #2c3e50;
+        /*color: #2c3e50;*/
         /*margin-top: 60px;*/
 
         height: 100%;

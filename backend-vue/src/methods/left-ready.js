@@ -29,7 +29,7 @@ $(function () {
             }
 
             // 开合转换
-            // $(this).parent().find(".tree-two-box").slideToggle();
+            $(this).parent().find(".tree-two-box").slideToggle();
 
             // 去掉一级菜单的颜色
             $(".tree-item-h3").each(function () {
