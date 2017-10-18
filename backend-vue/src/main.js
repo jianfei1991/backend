@@ -6,18 +6,33 @@ import App from "./App"
 import VueRouter from "vue-router"
 Vue.use(VueRouter)
 
+// 引入的第三方库
 import $ from "jquery"
+import ElementUI from "element-ui"
+import "element-ui/lib/theme-default/index.css"
 
-// import Login from "./pages/Login"
+Vue.use(ElementUI)
+
+// 引入的组件
+import Login from "./pages/Login"
 import Default from "./pages/Default"
 import Demo from "./pages/Demo"
+import qudaoguanli from "./pages/qudaoguanli"
+import EleDemo from "./common/EleDemo"
+import progress from "./common/progress"
+import ticket from "./common/ticket"
 
 // 设置eventbus来传值
 window.eventBus = new Vue()
 
+// 声明一个数组 -- 路由
 let a = [
-    // {path: "", component: Login},
+    // {path: "", component: ticket},
+    // {path: "", component: progress},
+    {path: "", component: EleDemo},
     // {path: "", component: Default},
+    // {path: "", component: Login},
+    {path: "/qudaoguanli", component: qudaoguanli},
     {path: "/Demo", component: Demo}
 ]
 

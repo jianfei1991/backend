@@ -41,6 +41,10 @@ body {
 
 .tree-item {
     overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+.tree-item:first-of-type {
+    border-top: 1px solid #ddd;
 }
 
 /*鼠标指针*/
@@ -214,6 +218,10 @@ body {
     font-weight: bold;
 }
 .tree-item-active {
+    color: #0db95f;
+    font-weight: bold;
+}
+.tree-item-active a {
     color: #0db95f;
     font-weight: bold;
 }

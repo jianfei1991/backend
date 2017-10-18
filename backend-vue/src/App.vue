@@ -26,7 +26,7 @@
             CommonHeader,
             CommonLeft,
             CommonRight,
-            CommonLeftDemo
+            CommonLeftDemo,
         }
     }
 </script>

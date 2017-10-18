@@ -5,7 +5,8 @@
                 "resourceId": "dc0700cf37c54a20ab8361a16e02c8ab",
                 "name": "渠道管理",
                 "isLeaf": false,
-                "url": "http://192.168.10.34:9090/"
+                "url": "http://192.168.10.34:9090/",
+                "route":"/qudaoguanli"
             },
             {
                 "next": [

@@ -1,5 +1,6 @@
 <template>
     <div class="common-left">
+        <router-link to=""></router-link>
         <div id="tree">
             <div class="tree-box">
                 <!-- 一级菜单容器 -->
@@ -36,8 +37,9 @@
                                 <h5 class="tree-item-h5-single tree-single" v-for="item3 in item2.next" v-show="item3.next == undefined"> {{ item3.name }}</h5>
                             </ul>
                         </li>
-                        <!-- <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined"><router-link to="/Demo" :data-url="item2.url" @click="sendUrl()">{{ item2.name }}</router-link></h4> -->
-                        <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined" :data-url="item2.url" @click="sendUrl($event)">{{ item2.name }}</h4>
+                        <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined"><router-link :to="{path:item2.route}" :da="item2.route" :data-url="item2.url" @click="sendUrl()">{{ item2.name }}</router-link></h4>
+                        <!-- <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined"><router-link to="/Demo" :da="item2.route" :data-url="item2.url" @click="sendUrl()">{{ item2.name }}</router-link></h4> -->
+                        <!-- <h4 class="tree-item-h4-single tree-single" v-for="item2 in item1.next" v-show="item2.next == undefined" :data-url="item2.url" @click="sendUrl($event)">{{ item2.name }}</h4> -->
                     </ul>
                 </div>
             </div>
@@ -54,10 +56,7 @@
     export default {
         methods: {
             sendUrl (e) {
-                console.log("sendUrl");
-                console.log(e.target.getAttribute("data-url"));
-                // eventBus.$emit("eBus", "e.target.getAttribute()");
-                eventBus.$emit("eBus", e.target.getAttribute("data-url"));
+                // eventBus.$emit("eBus", e.target.getAttribute("data-url"));
             },
             toggleTwo () {
                 this.twoShow = !this.twoShow;
@@ -87,7 +86,8 @@
                                 "resourceId": "dc0700cf37c54a20ab8361a16e02c8ab",
                                 "name": "渠道管理",
                                 "isLeaf": false,
-                                "url": "http://192.168.10.34:9090/"
+                                "url": "http://192.168.10.34:9090/",
+                                "route": "/qudaoguanli"
                             },
                             {
                                 "next": [

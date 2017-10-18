@@ -1,6 +1,6 @@
 <template>
     <div class="iframe">
-        <h1>以下是iframe</h1>
+        <h1>以下是iframe：</h1>
         <h2>ViewIframe: {{ iframeSrc }}</h2>
         <h2>ViewIframe: {{ receiveurl }}</h2>
         <!-- <iframe src="./static/index-demo.html" frameborder="0"></iframe> -->

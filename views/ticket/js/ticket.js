@@ -48,7 +48,7 @@ function ticketFn(el, arr) {
 
             // 创建左侧节点
             var type = $("<p class='type'>代金券</p>");
-            var text = $("<p class='type-text'><span>" + textVal + "</span>折</p>");
+            var text = $("<p class='type-text'><span>" + textVal + "</span>元</p>");
             // var desc = $("<p class='type-desc type-desc-discount'>" + descVal + "</p>");
 
             // 插入左侧容器
