@@ -62,6 +62,13 @@ $(function () {
             // 关闭其他同级菜单
             $(this).parent().siblings().find(".tree-two-box").slideUp();
 
+            // 如果只有一级菜单
+            $(".tree-item-h3").each(function () {
+                if($(this).parent().find(".tree-two-box").length == 0) {
+                    $(this).css("background-image", "none");
+                }
+            })
+
         })
     })
 
@@ -167,7 +174,7 @@ $(function () {
     // 如果只有一级菜单
     $(".tree-item-h3").each(function () {
         if($(this).parent().find(".tree-two-box").length == 0) {
-            // $(this).css("background-image", "none");
+            $(this).css("background-image", "none");
         }
     })
 
