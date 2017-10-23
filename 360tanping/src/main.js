@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 
 import axios from "axios"
+Vue.prototype.$axios = axios
 
 import ElementUI from "element-ui"
 import "element-ui/lib/theme-default/index.css"
