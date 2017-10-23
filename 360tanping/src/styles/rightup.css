@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+.right-up {
+    /*height: 400px;*/
+    background-color: #fff;
+    border-radius: 3px;
+    padding-bottom: 20px;
+}
+.right-up h3 {
+    height: 41px;
+    line-height: 41px;
+    font-size: 16px;
+    padding: 0 5px;
+    border-bottom: 2px solid #ddd;
+}
+.right-up-main {
+    margin: 20px 40px 0px;
+}
+.right-up-main .el-row {
+    height: 90px;
+}
+.right-up-main .el-row .grid-content {
+    height: 90px;
+    padding: 0 5px;
+    background-color: #eae8e9;
+}
+.right-main-1 .el-col:nth-of-type(odd) .grid-content {
+    background-color: #ceecea;
+}
+.right-main-2 .el-col:nth-of-type(even) .grid-content {
+    background-color: #ceecea;
+}
+.right-up-main .el-row .grid-content p {
+    height: 45px;
+    line-height: 45px;
+}
+.right-up-main .el-row .grid-content p:first-of-type {
+    border-bottom: 1px solid #ccc;
+}
+.right-up-main .el-row .grid-content p:last-of-type {
+    color: green;
+}
