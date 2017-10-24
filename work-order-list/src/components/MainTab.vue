@@ -1,7 +1,95 @@
 <template>
 <div class="main-tab">
     <h3>工单列表</h3>
-    <div class="main-tab-content">
+    <div class="main-select" style="display: flex;">
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+    </div>
+    <div class="main-select" style="display: flex;">
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+    </div>
+    <div class="main-select" style="display: flex;">
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单类型：</label>
+                <el-select v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+    </div>
+
+    <div class="main-table">
         <el-table ref="singleTable" stripe :data="tableData" highlight-current-row style="width: 100%">
             <el-table-column type="index" width="50"></el-table-column>
             <el-table-column property="date"label="日f期"width="120"></el-table-column>
@@ -30,35 +118,64 @@
 
         data() {
             return {
-                tableData: [{
-                    date: '2016-05-03',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
-                }, {
-                    date: '2016-05-02',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
-                }, {
-                    date: '2016-05-04',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
-                }, {
-                    date: '2016-05-01',
-                    name: '王小虎',
-                    province: '上海',
-                    city: '普陀区',
-                    address: '上海市普陀区金沙江路 1518 弄',
-                    zip: 200333
-                }]
+                tableData: [
+                    {
+                        date: '2016-05-03',
+                        name: '王小虎',
+                        province: '上海',
+                        city: '普陀区',
+                        address: '上海市普陀区金沙江路 1518 弄',
+                        zip: 200333
+                    },
+                    {
+                        date: '2016-05-02',
+                        name: '王小虎',
+                        province: '上海',
+                        city: '普陀区',
+                        address: '上海市普陀区金沙江路 1518 弄',
+                        zip: 200333
+                    },
+                    {
+                        date: '2016-05-04',
+                        name: '王小虎',
+                        province: '上海',
+                        city: '普陀区',
+                        address: '上海市普陀区金沙江路 1518 弄',
+                        zip: 200333
+                    },
+                    {
+                        date: '2016-05-01',
+                        name: '王小虎',
+                        province: '上海',
+                        city: '普陀区',
+                        address: '上海市普陀区金沙江路 1518 弄',
+                        zip: 200333
+                    }
+                ],
+
+                options: [
+                    {
+                        value: '选项1',
+                        label: '黄金糕'
+                    },
+                    {
+                        value: '选项2',
+                        label: '双皮奶'
+                    },
+                    {
+                        value: '选项3',
+                        label: '蚵仔煎'
+                    },
+                    {
+                        value: '选项4',
+                        label: '龙须面'
+                    },
+                    {
+                        value: '选项5',
+                        label: '北京烤鸭'
+                    }
+                ],
+                value: ''
             }
         }
     }
