@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.main-tab {
+    border-radius: 3px;
+    border: 1px solid #9db36a;
+    background-color: #ccc;
+}
+
+.main-tab h3 {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #a8bc7b;
+    border-bottom: 1px solid #9db36a;
+}
