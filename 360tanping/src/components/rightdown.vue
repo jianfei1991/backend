@@ -12,7 +12,7 @@
                         <el-table-column property="address"label="地址"></el-table-column>
 
                         <el-table-column fixed="right" label="操作" width="100">
-                            <template scope="scope">
+                            <template slot-scope="scope">
                                 <el-button @click="handleClick(scope.row)" type="text" size="small">查询</el-button>
                                 <el-button type="text" size="small">修改</el-button>
                             </template>
@@ -29,7 +29,7 @@
                         <el-table-column property="address"label="地址"></el-table-column>
 
                         <el-table-column fixed="right" label="操作" width="100">
-                            <template scope="scope">
+                            <template slot-scope="scope">
                                 <el-button @click="handleClick(scope.row)" type="text" size="small">查询</el-button>
                                 <el-button type="text" size="small">修改</el-button>
                             </template>
@@ -48,7 +48,7 @@
                         <el-table-column property="address"label="地址"></el-table-column>
 
                         <el-table-column fixed="right" label="操作" width="100">
-                            <template scope="scope">
+                            <template slot-scope="scope">
                                 <el-button @click="handleClick(scope.row)" type="text" size="small">查询</el-button>
                                 <el-button type="text" size="small">修改</el-button>
                             </template>

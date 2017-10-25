@@ -3,6 +3,9 @@
 .right-down {
 
 }
+.right-tab-content>div {
+    margin-bottom: 20px;
+}
 .right-tab-content-1 {
     border: 1px solid #ccc;
     border-top: 5px solid #11beb3;

@@ -13,8 +13,11 @@
     padding-bottom: 1px;
 }
 .left-up-a {
-    padding: 10px 20px 0 20px;
+    padding: 15px 20px 0 20px;
     margin-top: 0;
+}
+.el-input-group__append {
+    cursor: pointer;
 }
 .left-up-a:first-of-type .el-input-group__append {
     background-color: #00a65a;
@@ -25,12 +28,13 @@
     color: #fff;
 }
 .left-up-a:nth-of-type(2) {
-     margin-top: 10px;
+     /*margin-top: 10px;*/
      padding-bottom: 15px;
      border-bottom: 1px solid #ccc;
 }
 .left-up-b {
     margin: 20px;
+    margin-bottom: 15px;
 }
 .left-up-b p:first-of-type {
     color: #3abb80;
@@ -58,13 +62,16 @@
     text-align: center;
     background-color: #bfbfbf;
     color: #000;
+    cursor: pointer;
 }
 .bg-blue {
     background: #3abec0;
     color: #fff;
 }
 .left-up-b-3 {
+    margin-top: 15px;
     margin-bottom: 0;
+    cursor: pointer;
  }
 
 /**
