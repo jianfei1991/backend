@@ -16,6 +16,9 @@
         components: {
             HelloWorld,
             AppWrapper
+        },
+        data () {
+            return {}
         }
     }
 </script>

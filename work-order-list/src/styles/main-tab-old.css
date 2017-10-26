@@ -3,6 +3,7 @@
 .main-tab {
     border-radius: 3px;
     border: 1px solid #9db36a;
+    /*background-color: #ccc;*/
 }
 
 .main-tab h3 {
@@ -14,18 +15,37 @@
     background-color: #a8bc7b;
     border-bottom: 1px solid #9db36a;
 }
-.table-up td {
-    border: none;
-    margin: 15px 0;
-    height: 50px;
-}
-.table-up td:nth-of-type(odd) {
-    width: 10%;
-    text-align: right;
-    /*text-indent: 3em;*/
-    padding-right: 10px;
-}
 
+/*下拉菜单群组*/
+.main-select {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 15px;
+    margin-right: 40px;
+}
+.main-select>div {
+    display: flex;
+    justify-content: center;
+
+    width: 25%;
+    padding: 0 20px;
+}
+.main-select div label {
+    min-width: 30%;
+    line-height: 36px;
+    text-align: center;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.form-input {
+    width: 80%;
+}
+.form-input .el-input__inner {
+    width: 80%;
+}
 /*时间范围选择*/
 .main-time {
     display: flex;
@@ -39,7 +59,7 @@
     /*justify-content: center;*/
 }
 .main-time div label {
-    width: 17%;
+    width: 16%;
     text-align: center;
     line-height: 36px;
 }
@@ -49,15 +69,6 @@
 .main-status {
     margin: 15px;
     margin-left: 40px;
-}
-/*订单状态*/
-.main-select {
-    display: flex;
-    /*justify-content: space-around;*/
-    padding-left: 30px;
-}
-.main-select>div {
-    /*width: 25%;*/
 }
 
 /*表格样式*/
@@ -69,13 +80,13 @@
     padding-right: 5px;
     text-align: center;
 }
-.main-table th, td {
+th, td {
     border-left: 1px solid #ccc;
 }
-.main-table tr td:first-of-type {
+tr td:first-of-type {
     border-left: none;
 }
-.main-table tr td:last-of-type {
+tr td:last-of-type {
     border-right: none;
 }
 

@@ -2,76 +2,97 @@
 <div class="main-tab">
     <h3><i class="el-icon-menu"></i>&nbsp;&nbsp;工单列表</h3>
     <!-- 下拉菜单群组 -->
-    <table class="table-up">
-        <tr>
-            <td>工单类型：</td>
-            <td>
-                <el-select class="form-select" v-model="valueWork" placeholder="请选择">
-                    <el-option v-for="item in workOrder" :key="item.value" :label="item.label" :value="item.value"></el-option>
-                </el-select>
-            </td>
-            <td>问题类型：</td>
-            <td>
-                <el-select class="form-select" v-model="value" placeholder="请选择">
-                    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-                </el-select>
-            </td>
-            <td>问题种类：</td>
-            <td>
-                <el-select class="form-select" v-model="value" placeholder="请选择">
-                    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-                </el-select>
-            </td>
-            <td>工单号：</td>
-            <td>
-                <el-input  class="form-input" type="text" placeholder="请输入订单号"></el-input>
-            </td>
-        </tr>
-        <tr>
-            <td>订单号：</td>
-            <td>
-                <el-input  class="form-input" type="text" placeholder="请输入订单号"></el-input>
-            </td>
-            <td>城市：</td>
-            <td>
-                <el-select class="form-select" v-model="value" placeholder="请选择">
-                    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-                </el-select>
-            </td>
-            <td>姓名：</td>
-            <td>
-                <el-input  class="form-input" type="text" placeholder="请输入姓名"></el-input>
-            </td>
-            <td>手机号：</td>
-            <td>
-                <el-input  class="form-input" type="text" placeholder="请输入手机号"></el-input>
-            </td>
-        </tr>
-        <tr>
-            <td>车牌号：</td>
-            <td>
-                <el-input  class="form-input" type="text" placeholder="请输入车牌号"></el-input>
-            </td>
-            <td>工作状态：</td>
-            <td>
-                <el-select class="form-select" v-model="value" placeholder="请选择">
-                    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-                </el-select>
-            </td>
-            <td>最后处理人：</td>
-            <td>
-                <el-select class="form-select" v-model="value" placeholder="请选择">
-                    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
-                </el-select>
-            </td>
-            <td>超时工单：</td>
-            <td>
-                <el-select class="form-select" v-model="valueTime" placeholder="请选择">
-                    <el-option v-for="item in timeOut" :key="item.value" :label="item.label" :value="item.value"></el-option>
-                </el-select>
-            </td>
-        </tr>
-    </table>
+    <div class="main-select" style="display: flex;">
+        <div>
+            <label for="">工单类型：</label>
+            <el-select class="form-select" v-model="valueWork" placeholder="请选择">
+                <el-option v-for="item in workOrder" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">问题类型：</label>
+            <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">问题种类：</label>
+            <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">工单号：</label>
+            <el-input  class="form-input" type="text" placeholder="请输入订单号"></el-input>
+            <!-- <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select> -->
+        </div>
+    </div>
+    <div class="main-select">
+        <div>
+            <label for="">订单号：</label>
+            <el-input  class="form-input" type="text" placeholder="请输入订单号"></el-input>
+            <!-- <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select> -->
+        </div>
+
+        <div>
+            <label for="">城市：</label>
+            <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">姓&nbsp;&nbsp;&nbsp;名：</label>
+            <el-input  class="form-input" type="text" placeholder="请输入姓名"></el-input>
+            <!-- <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select> -->
+        </div>
+
+        <div>
+            <label for="">手机号：</label>
+            <el-input  class="form-input" type="text" placeholder="请输入手机号"></el-input>
+            <!-- <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select> -->
+        </div>
+    </div>
+    <div class="main-select" style="display: flex;">
+        <div>
+            <label for="">车牌号：</label>
+            <el-input  class="form-input" type="text" placeholder="请输入车牌号"></el-input>
+            <!-- <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select> -->
+        </div>
+
+        <div>
+            <label for="">工单状态：</label>
+            <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">最后处理人：</label>
+            <el-select class="form-select" v-model="value" placeholder="请选择">
+                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+
+        <div>
+            <label for="">超时工单：</label>
+
+
+        </div>
+    </div>
 
     <!-- 时间范围选择 -->
     <div class="main-time">
@@ -84,23 +105,21 @@
             <el-date-picker class="form-time" v-model="value4" type="datetimerange" :picker-options="pickerOptions2" placeholder="选择时间范围" align="right"></el-date-picker>
         </div>
     </div>
-    <table class="table-up">
-        <tr>
-            <td>订单状态：</td>
-            <td style="width:15%;">
-                <el-select class="form-select" v-model="valueState" placeholder="请选择">
-                    <el-option v-for="item in orderState" :key="item.value" :label="item.label" :value="item.value"></el-option>
-                </el-select>
-            </td>
-            <td>
-                <el-button type="info" style="margin-left:40px">查询</el-button>
-            </td>
-            <td>
 
-                <el-button type="success" style="margin-left:40px">导出</el-button>
-            </td>
-        </tr>
-    </table>
+    <div class="main-select" style="display: flex;">
+        <div>
+            <label for="">订单状态：</label>
+            <el-select class="form-select" v-model="valueState" placeholder="请选择">
+                <el-option v-for="item in orderState" :key="item.value" :label="item.label" :value="item.value"></el-option>
+            </el-select>
+        </div>
+        <div style="justify-content:start;">
+            <el-button type="info" style="margin-left:40px">查询</el-button>
+            <el-button type="success" style="margin-left:40px">导出</el-button>
+        </div>
+        <div></div>
+        <div></div>
+    </div>
 
     <div class="main-table">
         <el-table ref="singleTable" stripe :data="tableData" highlight-current-row style="width: 100%">
@@ -143,18 +162,8 @@
 
 <script>
     export default {
-        methods: {
-            handleSizeChange(val) {
-                console.log(`每页 ${val} 条`);
-            },
-            handleCurrentChange(val) {
-                console.log(`当前页: ${val}`);
-            }
-        },
         data() {
             return {
-                options: [],
-
                 tableData: [
                     {
                         symbol: '○',
@@ -234,6 +243,7 @@
                     },
 
                 ],
+
                 workOrder: [
                     {
                         value: '选项1',
@@ -320,44 +330,6 @@
                 valueState: "",
                 valueTime: "",
                 value: "",
-
-                // 日历数据
-                pickerOptions2: {
-                    shortcuts: [
-                    {
-                        text: '最近一周',
-                        onClick(picker) {
-                            const end = new Date();
-                            const start = new Date();
-                            start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
-                            picker.$emit('pick', [start, end]);
-                        }
-                    },
-                    {
-                        text: '最近一个月',
-                        onClick(picker) {
-                            const end = new Date();
-                            const start = new Date();
-                            start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
-                            picker.$emit('pick', [start, end]);
-                        }
-                    },
-                    {
-                        text: '最近三个月',
-                        onClick(picker) {
-                            const end = new Date();
-                            const start = new Date();
-                            start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
-                            picker.$emit('pick', [start, end]);
-                        }
-                    }]
-                },
-                value3: [new Date(2000, 10, 10, 10, 10), new Date(2000, 10, 11, 10, 10)],
-                value4: '',
-
-                // 分页相关变量
-                currentPage4: 4,
-
             }
         }
     }
