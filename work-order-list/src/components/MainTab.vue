@@ -363,7 +363,6 @@
     }
 </script>
 
-
 <style scoped>
     @import "../styles/main-tab.css"
 </style>
