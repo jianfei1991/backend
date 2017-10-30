@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+.main-tab {
+    border-radius: 3px;
+    border: 1px solid #9db36a;
+    /*background-color: #ccc;*/
+}
+
+.main-tab h3 {
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #a8bc7b;
+    border-bottom: 1px solid #9db36a;
+}
+
+/*下拉菜单群组*/
+.main-select {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 15px;
+    margin-right: 40px;
+}
+.main-select>div {
+    display: flex;
+    justify-content: center;
+
+    width: 25%;
+    padding: 0 20px;
+}
+.main-select div label {
+    min-width: 30%;
+    line-height: 36px;
+    text-align: center;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.form-input {
+    width: 80%;
+}
+.form-input .el-input__inner {
+    width: 80%;
+}
+/*时间范围选择*/
+.main-time {
+    display: flex;
+    justify-content: space-around;
+    justify-content: start;
+    margin: 15px;
+}
+.main-time>div {
+    width: 50%;
+    display: flex;
+    /*justify-content: center;*/
+}
+.main-time div label {
+    width: 16%;
+    text-align: center;
+    line-height: 36px;
+}
+.main-time .form-time {
+    width: 40%;
+}
+.main-status {
+    margin: 15px;
+    margin-left: 40px;
+}
+
+/*表格样式*/
+.main-table {
+    margin-top: 20px;
+}
+.el-table .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+th, td {
+    border-left: 1px solid #ccc;
+}
+tr td:first-of-type {
+    border-left: none;
+}
+tr td:last-of-type {
+    border-right: none;
+}
+
+/*分页器样式*/
+.main-pagi {
+    margin: 15px;
+    margin-bottom: 40px;
+}
+.main-pagi .el-pagination {
+    text-align: right;
+
+}

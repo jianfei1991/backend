@@ -84,6 +84,7 @@
             <el-date-picker class="form-time" v-model="value4" type="datetimerange" :picker-options="pickerOptions2" placeholder="选择时间范围" align="right"></el-date-picker>
         </div>
     </div>
+
     <table class="table-up">
         <tr>
             <td>订单状态：</td>
@@ -93,11 +94,11 @@
                 </el-select>
             </td>
             <td>
-                <el-button type="info" style="margin-left:40px">查询</el-button>
+                <el-button type="info" icon="search" style="margin-left:40px">查询</el-button>
             </td>
             <td>
 
-                <el-button type="success" style="margin-left:40px">导出</el-button>
+                <el-button type="success" icon="document" style="margin-left:40px">导出</el-button>
             </td>
         </tr>
     </table>
@@ -126,7 +127,7 @@
 
             <el-table-column label="操作" width="">
                 <template slot-scope="scope">
-                    <el-button @click="handleClick(scope.row)" type="text" size="small">查询</el-button>
+                    <el-button @click="handleClick(scope.row)" type="primary" size="small">查询</el-button>
                     <!-- <el-button type="text" size="small">修改</el-button> -->
                 </template>
             </el-table-column>

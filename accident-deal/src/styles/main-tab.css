@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/*组件容器*/
+.main-tab {
+    border-radius: 3px;
+    border: 1px solid #9db36a;
+}
+
+.main-tab h3 {
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #a8bc7b;
+    border-bottom: 1px solid #9db36a;
+}
+/*上部表格*/
+.table-up td {
+    border: none;
+    margin: 15px 0;
+    height: 50px;
+}
+.table-up td:nth-of-type(odd) {
+    width: 10%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/*时间范围选择*/
+.main-time {
+    display: flex;
+    justify-content: start;
+    margin: 15px;
+    /*margin-left: 5%;*/
+}
+.main-time>div {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.main-time div label {
+    min-width: 10%;
+    line-height: 36px;
+    text-align: center;
+    padding-right: 10px;
+}
+.main-time div:nth-of-type(2) {
+    justify-content: right;
+}
+.main-time div:nth-of-type(2) label {
+    min-width: 11%;
+    line-height: 36px;
+    text-align: center;
+    padding-right: 0px;
+}
+.main-time .el-input {
+    width: 77%;
+}
+.main-time .form-input {
+    width: 30%;
+}
+.main-status {
+    margin: 15px;
+    margin-left: 40px;
+}
+
+/*表格样式*/
+.main-table {
+    margin-top: 20px;
+}
+.el-table .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+/*表头*/
+.main-table th, td {
+    border-left: 1px solid #ccc;
+}
+.main-table th:first-of-type, td {
+    border-left: none;
+}
+/*表体*/
+.main-table tr td {
+    border-left: 1px solid #ccc;
+}
+.main-table tr td:first-of-type {
+    border-left: none;
+}
+.main-table tr td:last-of-type {
+    border-right: none;
+}
+/*两个按钮相连时*/
+.el-button+.el-button {
+    margin-left: 0px;
+    margin-top: 2px;
+}
+
+/*分页器样式*/
+.main-pagi {
+    margin: 15px;
+    margin-bottom: 40px;
+}
+.main-pagi .el-pagination {
+    text-align: right;
+
+}
